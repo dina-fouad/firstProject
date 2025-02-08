@@ -1,128 +1,442 @@
-/* عام: إعدادات الصفحة */
+
+.task:hover{
+   box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.843);
+  
+}  
+
+
+:root {
+    --background-color: #ECEFF4;
+    --container-color: #A29EC2;
+    --header-color: #7D78A3;
+    --btn-color: #5E5A78;
+    --btn-hover-color: #4A4762;
+    --text-color: #3D3B4F;
+    --white: #ffffff;
+}
+
 body {
-    font-family: 'Cairo', sans-serif;
-    background: linear-gradient(135deg, #ffcccb, #ffa07a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
     margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: "Rubik", serif;
+    font-optical-sizing: auto;
+    
+  
 }
 
-/* العنوان */
-h1 {
-    background-color: #ff6347;
-    color: white;
-    padding: 20px;
-    margin: 0;
-    font-size: 28px;
-    font-weight: bold;
-    border-bottom: 4px solid #ffa07a;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* القسم الرئيسي */
-main {
-    margin-top: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 400px;
-    margin: auto;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* الحقول */
-input {
-    width: 90%;
+/* الحاوية الرئيسية */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    background-color: var(--container-color);
     padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ffb6c1;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20%;
+  
+}
+
+/* الهيدر */
+.header {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-color);
+    padding: 10px;
     border-radius: 8px;
-    font-size: 16px;
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: 0.3s ease;
-}
-
-/* تأثير عند النقر على الحقول */
-input:focus {
-    border-color: #ffa07a;
-    outline: none;
-    box-shadow: 0px 0px 8px rgba(255, 160, 122, 0.5);
-}
-
-/* الأزرار */
-button {
-    padding: 12px 20px;
-    margin: 10px 5px;
-    font-size: 16px;
-    color: white;
-    background: #ff6347;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* تأثير عند مرور المؤشر على الأزرار */
-button:hover {
-    background: #ff4500;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-}
-
-/* النصوص */
-label {
+    color: var(--white);
     font-size: 18px;
-    color: #333;
-    margin: 10px 0;
-    display: block;
+   
 }
 
-/* الرسالة */
-label#bmi {
-    margin-top: 20px;
-    font-size: 20px;
-    color: #ff4500;
-    font-weight: bold;
-}
-
-/* ميديا كويري للأجهزة الصغيرة */
-@media (max-width: 600px) {
-    main {
-        width: 95%;
-    }
-
-    button {
-        width: 95%;
-    }
-
-    input {
-        width: 95%;
-    }
-}
-/* تذييل الصفحة */
-footer {
-    background-color: #ff6347; /* لون برتقالي مبهج */
-    color: white;
+.header h2 {
+    flex-grow: 1;
     text-align: center;
-    padding: 20px;
-    margin-top: 30px;
+    margin: 0;
+}
+
+.header button {
+    background: var(--white);
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--header-color);
     font-size: 16px;
-    border-top: 4px solid #ffa07a;
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
 }
 
-footer p {
-    margin: 5px 0;
-    font-weight: bold;
-}
-
-/* رمز العلم */
-footer p strong {
-    font-size: 18px;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+.header button:hover {
+    background: var(--text-color);
 }
 
 
+.task-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 10px;
+    border-radius: 8px;
+    border-bottom: #9e8ea1 solid 1px;
+    transition: box-shadow 0.2s;
+}
+
+
+
+.task-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.task-info h3 {
+    margin: 0;
+    font-size: 25px;
+    color: var(--text-color);
+}
+
+
+input[type="date"] {
+    margin-top: 5px;
+    padding: 4px;
+    border:none;
+    border-radius: 5px;
+    background-color: var(--white);
+    font-size: 9px;
+    width: 75px;
+    height: 12px;
+}
+
+
+.task-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.task-buttons button {
+    background: var(--btn-color);
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.task-buttons button:hover {
+    background: var(--btn-hover-color);
+}
+#tasks {
+    width: 100%;
+    max-height: 500px; 
+    overflow-y: auto; 
+    padding: 10px;
+    box-sizing: border-box;
+}
+/* تصميم للهواتف المحمولة */
+@media screen and (max-width: 600px) {
+    body {
+        height: auto; /* تغيير ارتفاع الـ body ليكون ملائمًا للموبايل */
+        padding: 10px; /* إضافة padding للموبايل */
+    }
+
+    /* الحاوية الرئيسية */
+    .container {
+        width: 100%;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .header {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .header h2 {
+        font-size: 18px;
+    }
+
+    .task-list {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .task {
+        width: 100%;
+        flex-direction: column;
+        padding: 15px;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .task-info h3 {
+        font-size: 18px;
+    }
+
+    input[type="date"] {
+        width: 100%;
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .task-buttons button {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+}
+
+/* تصميم للأجهزة اللوحية */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .task {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-buttons button {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .header button {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .task-info h3 {
+        font-size: 20px;
+    }
+
+    input[type="date"] {
+        width: 80px;
+    }
+    .task:hover {
+        box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.5); /* تقليل تأثير الظل */
+    }
+    
+}
+/* تأثير الظهور عند إضافة مهمة جديدة */
+.task {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* الأنيميشن */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* عند التمرير فوق الأزرار */
+.task-buttons button:hover {
+    background: var(--btn-hover-color);
+    transform: scale(1.1); /* تكبير الأزرار عند التمرير عليها */
+    transition: transform 0.2s, background 0.2s;
+}
+
+/* عند حذف المهمة */
+.task.delete {
+    animation: slideOut 0.3s ease-out forwards;
+}
+
+/* حركة التلاشي والانزلاق */
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+
+/* عند تعديل المهمة */
+.task.update {
+    animation: scaleDown 0.2s ease-out forwards;
+}
+
+/* حركة التصغير */
+@keyframes scaleDown {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.95);
+    }
+}
+
+
+/* إظهار المهام عند التمرير */
+.task-list {
+    opacity: 0;
+    animation: fadeInList 0.6s ease-out forwards;
+}
+
+@keyframes fadeInList {
+    to {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /* تقليل حجم الأنيميشن على الشاشات الصغيرة */
+    .task {
+        animation-duration: 0.4s; /* تقليل مدة الأنيميشن */
+    }
+
+    /* تقليل تأثير التمرير على الأزرار */
+    .task-buttons button:hover {
+        transform: scale(1.05);
+    }
+}
+/* عند تحميل الصفحة، ظهور الحاوية تدريجيًا */
+.container {
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+/* حركة الظهور */
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأثيرات سلسة عند تغيير الألوان */
+.task {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+    background-color: rgba(97, 97, 97, 0.1);
+    box-shadow: 0px 3px 15px rgba(97, 97, 97, 0.7);
+}
+/* عند إضافة أو حذف مهمة */
+.task {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.task.added {
+    opacity: 1;
+}
+/* تأثير 3D على المهمة عند التمرير فوقها */
+.task {
+    perspective: 1000px; /* إضافة منظور */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task:hover {
+    transform: rotateY(10deg) rotateX(5deg); /* التدوير حول المحاور 3D */
+    box-shadow: 0px 8px 30px rgba(97, 97, 97, 0.5); /* إضافة تأثير الظل */
+}
+/* تأثير 3D على الحاوية الرئيسية */
+.container {
+    transform-style: preserve-3d; /* الحفاظ على عمق 3D عند التحويل */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    transform: rotateY(15deg) rotateX(5deg); /* تدوير الحاوية على المحاور 3D */
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3); /* إضافة تأثير ظل في العمق */
+}
+/* تأثير 3D عند التمرير على الأزرار */
+.task-buttons button {
+    transform: perspective(500px) translateZ(0);
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.task-buttons button:hover {
+    transform: translateZ(15px); /* دفع الأزرار للأمام لجعلها تظهر بشكل ثلاثي الأبعاد */
+    background-color: var(--btn-hover-color); /* تغيير اللون عند التمرير */
+}
+/* عند إضافة مهمة جديدة */
+.task.added {
+    animation: slideIn3D 0.5s ease-out forwards;
+}
+
+/* الحركة الثلاثية الأبعاد */
+@keyframes slideIn3D {
+    0% {
+        transform: translateY(100px) rotateX(45deg) scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        opacity: 1;
+    }
+}
+/* عند حذف المهمة */
+.task.delete {
+    animation: slideOut3D 0.3s ease-out forwards;
+}
+
+/* تأثير التلاشي والابتعاد عن الكاميرا */
+@keyframes slideOut3D {
+    0% {
+        transform: translateX(0) rotateX(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%) rotateY(90deg) scale(0.7);
+        opacity: 0;
+    }
+}
+/* تأثير 3D على الأيقونات */
+.task-buttons i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.task-buttons button:hover i {
+    transform: rotate(360deg) scale(1.2); /* تدوير الأيقونة مع تكبيرها */
+    color: var(--white); /* تغيير اللون عند التمرير */
+}
+/* تأثير عند التمرير على قائمة المهام */
+.task-list {
+    opacity: 0;
+    transform: translateZ(-100px); /* جعل العناصر تبدأ في الخلف */
+    animation: fadeIn3D 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn3D {
+    to {
+        opacity: 1;
+        transform: translateZ(0); /* العودة للموقع الطبيعي */
+    }
+}
+/* تأثير 3D على الأزرار عند التفاعل */
+button {
+    transform: perspective(200px) scale(1);
+    transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+button:hover {
+    transform: perspective(200px) scale(1.1) rotateY(5deg) rotateX(5deg);
+    background-color: var(--btn-hover-color);
+}

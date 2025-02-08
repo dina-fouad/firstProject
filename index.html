@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Tasks</title>
     <link rel="stylesheet" href="style.css">
-    <h1>حاسبة مؤشر كتلة الجسم BMI</h1>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik+Vinyl&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 <body>
-    <main>
-        <label for="hight">الطول (سم):</label>
-        <input id="hight" type="text" placeholder="أدخل الطول">
-        <br>
-        <label for="weight">الوزن (كجم):</label>
-        <input id="weight" type="text" placeholder="أدخل الوزن">
-        <br>
-        <button id="myBtn">عرض النتيجة</button>
-        <button id="deleteResult">حذف</button>
-        <br>
-        <label id="bmi"></label>
-    </main>
-   
-    <footer>
-        <p>Created by <strong>Dina Albarghouthi</strong></p>
-        <p><strong>Free Gaza 🇵🇸</strong></p>
-    </footer>
-    <script src="app.js"></script>
-</body>
 
+    <div class="container">
+        
+        <div class="header">
+            <h2>My Tasks</h2>
+            <button id="addTask"> 
+                <i class="fas fa-plus" ></i>
+            </button>
+        </div>
+
+       
+        <div class="task-list" id  = "tasks">
+            
+           
+        </div>
+    </div>
+
+</body>
+<script src="app.js"></script>
 </html>
